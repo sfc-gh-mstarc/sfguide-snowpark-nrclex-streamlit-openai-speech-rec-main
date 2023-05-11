@@ -3,7 +3,7 @@
 # OpenAI: https://openai.com/
 
 import pandas as pd
-from snowflake.snowpark.session import Session
+from snowflake.snowpark import Session
 import streamlit as st
 import openai
 import os

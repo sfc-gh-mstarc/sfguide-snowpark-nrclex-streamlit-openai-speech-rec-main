@@ -4,11 +4,11 @@ CREATE DATABASE OPEN_AI_DB;
 create or replace schema OPEN_AI_DB.EMOTION_RECOGNITION;
 
 --CREATE NEW STAGE
-create stage RAW_DATA_SET;
+create or replace stage RAW_DATA_SET 
+    encryption = (type = 'SNOWFLAKE_SSE')
+   , directory = (enable = true);
 
---ENABLE DIRECTORY ON STAGE
-alter stage RAW_DATA_SET
-set directory = (enable = true);
+--refresh DIRECTORY ON STAGE
 alter stage RAW_DATA_SET refresh;
 
 create or replace TABLE OPEN_AI_DB.EMOTION_RECOGNITION.TB_CUSTOMER_AUDIO_SENTIMENTS (
