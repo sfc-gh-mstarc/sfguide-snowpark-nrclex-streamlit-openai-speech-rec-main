@@ -14,8 +14,9 @@ conda activate spark_openai_py38
 ```
 Install into Conda environment
 ```
-conda install snowflake-snowpark-python
-pip3 install streamlit watchdog openai nrclex
+conda install snowflake-snowpark-python openai -y
+conda install -c conda-forge streamlit -y
+pip3 install watchdog nrclex
 ```
 List all the python packages in our environment
 ```
