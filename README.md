@@ -42,3 +42,5 @@ Static pandas data with a static chart.
 ```
 streamlit run Snowpark_NRCLex_Streamlit_OpenAI_Audio_rec.py
 ```
+
+Testing vs code commit.
